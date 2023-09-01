@@ -272,8 +272,8 @@ if __name__ == "__main__":
     args.n_clusters = 9
     args.n_input = 8
     args.image_size = [610, 340]
-    dataset = Load_my_Dataset("/home/xianlli/dataset/HSI/pavia/PaviaU.mat",
-                              "/home/xianlli/dataset/HSI/pavia/PaviaU_gt.mat")
+    dataset = Load_my_Dataset("PaviaU.mat",
+                              "PaviaU_gt.mat")
     args.num_sample = dataset.__len__()
     acc, nmi,kappa = train_EDESC()
     print('ACC {:.4f}'.format(acc), 'nmi {:4f}'.format(nmi),' kappa {:4f}'.format(kappa))
